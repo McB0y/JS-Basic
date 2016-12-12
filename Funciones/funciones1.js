@@ -17,18 +17,24 @@ var profesion = "Futbolista";
 var nacionalidad = "Mexicano";
 var equipo = "Real Madrid";
 
-/*se están declarando las variables en los parametros,
-pero si no se declaran en el documento u objeto global marcara error,.*/
+/*Se están declarando las variables en los parametros,
+pero si no se declaran en el documento u objeto global marcara error.*/
+
 function getDatos (nombre, apellido, profesion, nacionalidad, equipo) {
  console.log("Los datos del jugador son : " + nombre +
 " ," + apellido + " ," + profesion + " ," + nacionalidad + " ," + equipo);
 }
 
 //una vez que fueron declaradas las varibles que recibe la funcion procedemos:
-getDatos("Rafael", "Cisneros", "Gómez", "Programador", "Mexicano", "C0smos");//pasando valores.
+getDatos("Ramón", "Caballero", "Godínez", "Programador", "Mexicano", "C0smos");
+//pasando valores por valor.
 
-getDatos(nombre, apellido, profesion, nacionalidad, equipo);//o utilizando valores ya declarados
+getDatos(nombre, apellido, profesion, nacionalidad, equipo);
+//o utilizando valores ya declarados.
 
+
+
+   //Declaración del objeto en el documento.
    var persona = {
       nombre: "Hugo",
       apellido: "Sánchez",
@@ -37,7 +43,7 @@ getDatos(nombre, apellido, profesion, nacionalidad, equipo);//o utilizando valor
       equipo: "c0smos"
    };
 
-//defininimos la función, donde persona es un obj anónimo o un obj  prev. declarado.
+//Defininimos la función, donde persona es un obj anónimo o un obj prev. declarado.
    function datos(persona){
       console.log(persona.nombre + " " + persona.apellido + " " + persona.profesion
       + " " + persona.nacionalidad + " " + persona.equipo);

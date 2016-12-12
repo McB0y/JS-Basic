@@ -120,7 +120,7 @@ var Hospital = {
             }
          },
          del3 : "Mixcoac",
-         del4 : "Benito Juarez",
+         del4 : "Benito Juárez",
          del5 : {
       //obtendremos el objeto global cuando se invoque a la función.
             contextoGlobal: function(){
