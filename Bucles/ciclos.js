@@ -31,28 +31,3 @@ oso.forEach(function( elemento, index) {
 for (var i in razasOso) {
       console.log("Raza : " + razasOso[i]);
 }
-
-
-
-
-/*El reflejo de los objetos donde se conocen a si mismos.
-
-
-var persona = function() {
-   this.nombre = "Juan";
-   this.apellido = "Guzman";
-   this.edad = 23;
-};
-
-var Persona = new persona();
-persona.prototype.direccion = "Rivera Maya";
-
-for (var prop in Persona) {
-   if (Persona.hasOwnProperty(prop)) {// !Persona.hasOwnProperty(prop)
-      continue;
-   }
-   console.log("persona " + Persona[prop]);
-}
-
-
-*/
