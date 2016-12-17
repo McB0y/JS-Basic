@@ -12,7 +12,7 @@
 
 //transformaremos las siguientes cadenas en arreglos y los manipularemos.
 
-var pensamiento = "Hoy es el di que puedo practicar mis conocimientos de javascript"
+var pensamiento = "Hoy es el día que puedo practicar mis conocimientos de javascript"
 var frase = "El respeto al derecho ageno es la paz"
 var listaDeCompras = "huevo, leche, arroz, azucar, cereal, jugo"
 var gadgets = "iphone, ipad, zenBook, VRealGlasses, smartWatch, etc"

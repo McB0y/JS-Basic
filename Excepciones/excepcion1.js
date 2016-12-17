@@ -92,3 +92,6 @@ try {
    console.log("Ya saben siempre se ejecuta este bloque...");
 
 }
+
+
+//En conclución podemos ver que throw regresa : una función, un objeto o algo más.

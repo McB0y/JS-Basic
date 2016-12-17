@@ -47,7 +47,7 @@ parseFloat("0x12FA");//devuelve 0.
 
 
 //Ambos métodos nos regresan una cadena.
-//numero.toFixed(x) redondea un número tomando como digitos el parámetro "x", redondeando los números restantes
+//numero.toFixed(x) redondea un número tomando cómo digitos el parámetro "x", redondeando los números restantes
 //numero.toExponential(x) convierte un número a su base exponencial tomando a "x" como parámetro.
 
 

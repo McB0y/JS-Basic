@@ -57,11 +57,11 @@ var familia = {
 
 function crearJuego(nombre, puntMax, puntMin){
    return{//me regresa el objeto.
-      nombre:nombre,
+      nombre: nombre,
       puntMax: puntMax,
       puntMin: puntMin
    }
-}
+};
 
 var juego = crearJuego("Poker", "Flor Imperial", "par 0");
 
@@ -106,7 +106,7 @@ var Hospital = {
       sala4: "radiología"
    },
    direccion : {
-      pais : "Mexico",
+      pais : "México",
       ciudad: "CDMX",
       delegación:{
          del1 : "Gustavo A. Madero",
@@ -126,7 +126,7 @@ var Hospital = {
             contextoGlobal: function(){
                var self= this;
                var critico = function(){
-               //aqui ya nohay contexto del objeto... y es por eso que regresa window
+               //aqui ya no hay contexto del objeto... y es por eso que regresa window
                //podria usarse para acceder a variables que son globales.
                   console.log(this)
                }
@@ -142,21 +142,3 @@ var Hospital = {
     }
   }
 }
-
-
-
-//Preludio del polimorfismo.
-
-function identificada(param) {//identificaremos el tipo de parametro que se esta enviando.
-   console.log("Tenemos argumento del tipo :" + typeof param)
-   console.log("Tenemos una instancia de : " +  param instanceof Vago);
-}
-
-function Vago() {
-   this.nombre = "Fernando";
-   this.edad = 30;
-}
-
-var vago = new Vago();
-
-identificada(vago);

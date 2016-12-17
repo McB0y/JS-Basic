@@ -25,11 +25,10 @@ Rotulación de ciclos y sentencias de escape.
 //'continue' es utilizado para saltar a la siguiente linea de código
       for (var i = 0; i < 10; i++) {
 
-         if (i === 5) {
-            continue;//saltando la impresión de 'i' en 5
-         }else {
-            console.log("i vale :" + i);
-         }
+         if (i === 5)
+         continue;
+         console.log("i vale : " + i);
+
       }
 
 

@@ -27,7 +27,7 @@ var mul = Math.round(numero*100);
       inicio++;
    }
    console.timeEnd("Test: ");
-})(0);
+})(0);//...
 
 
 //Ciclo do while.

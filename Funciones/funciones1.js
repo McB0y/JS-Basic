@@ -2,7 +2,7 @@
    McB0y.
    Las funciones en Javascript pueden recibir cualquier tipo de objeto,
    incluidas funciones, estas siempre regresan un valor, se muestran algunos
-   ejemplos de su uso acontinuación.
+   ejemplos de su uso a continuación.
 
    Puedes consultar la siguiente bibliografía:
    Título: Aprendiendo Javascript
@@ -17,7 +17,7 @@ var profesion = "Futbolista";
 var nacionalidad = "Mexicano";
 var equipo = "Real Madrid";
 
-/*Se están declarando las variables en los parametros,
+/*Se están declarando las variables en los parámetros,
 pero si no se declaran en el documento u objeto global marcara error.*/
 
 function getDatos (nombre, apellido, profesion, nacionalidad, equipo) {
@@ -62,9 +62,9 @@ getDatos(nombre, apellido, profesion, nacionalidad, equipo);
          console.log("Propiedad del objeto " + elemento);
       });
 
-      for (var i in persona) {
-         if (persona.hasOwnProperty(i)) {
-            console.log("Valor : " + perosna[i];
+      for (var propiedad in persona) {
+         if (persona.hasOwnProperty(propiedad)) {
+            console.log("Valor : " + persona[propiedad]);//
          }
       }
 
@@ -117,9 +117,10 @@ ejecutaAnonima(function() {
 
 
 //ya que las funciones siempre devuelven algo podemos incluso regresar fn anonimas.
+//son Closures.
 
 
-function crearFun () {
+function crearFun ({}) {
    return function(nombre){
       console.log("Regrese de un return anónimo, mi contenido es : " + nombre);
       return function(){
@@ -133,7 +134,7 @@ var segundoCallBack = returnAnonima();
 
 
 
-//podemos tambien asignar a las funciones propiedades, objetos, etc.
+//podemos también asignar a las funciones propiedades, objetos, etc.
 
 function miFuncion() {
    console.log("Soy solamente una funcion más...");
