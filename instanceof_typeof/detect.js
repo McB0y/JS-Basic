@@ -11,24 +11,50 @@ Utilizando typeof e instanceof
 
    var tiaSegunda = new Familia("Chávez", "Cafes", "Curva", 1.60, "Robusta");
 
+   var familiar = new Familia("Chávez", "Cafes", "Curva", 1.70, "Robusta");
+
    var tio = new Hijo("Chávez", "Cafes", "Curva", 1.80, "Robusta", "Francisco", "Ingeniero", 2);
 
    var primo = new Nieto("Chávez", "Cafes", "Curva", 1.80, "Robusta", "Miguel", "Ingeniero", "Sin", "Empleado");
 
    var intruso = new String("¿Familia cómo están?");
 
+    var segundos = 0;
 
-   //poniendo a prueba
-   detecta(tiaSegunda);
-   detecta(tio);
-   detecta(primo);
-   detecta(intruso);
+   //Entra a la mansión del clan alguien cada segundo...
+   //
+   // setTimeout(function() {
+   //    detecta(tiaSegunda);
+   //    setTimeout(function() {
+   //       detecta(tio);
+   //       setTimeout(function() {
+   //          detecta(primo);
+   //          setTimeout(function() {
+   //             detecta(intruso);
+   //          },1000)
+   //       }, 1000)
+   //    },1000)
+   // }, 1000);
+
+   var entrada = setInterval(function() {
+
+      //entraron durante 5 segundos
+      segundos++;
+
+      if (segundos === 5) {
+         clearInterval(entrada);
+      }else {
+
+      detecta(familiar);
+         }
+
+   },5000);
 
 
 
    function detecta(integrante) {
 
-      console.log("Sólo se dara la bienvenida a los que sean integrantes de la familia.");
+      console.log("Identificación correcta.");
       try {
 
       if ((integrante instanceof Familia) && (typeof integrante == "object")) {
