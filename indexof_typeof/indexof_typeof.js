@@ -1,9 +1,9 @@
-//Preludio del polimorfismo.
-
-
 /*
 
-El operador instanceof regresa verdaadero si el objeto especificado es del tipo especificado.
+         Preludio del polimorfismo.
+
+
+El operador instanceof regresa verdadero si el objeto especificado es del tipo especificado.
 nombreObjeto instanceof tipoObjeto, puede recurrir a diferentes códigos de manipulación de
 excepciones dependiendo del tipo de excepción tomada.
 
@@ -46,8 +46,8 @@ typeof null == 'object'
 
       var man = new Man();
 
-      console.log("Tenemos argumento del tipo :" + typeof man)
-      console.log("Tenemos una instancia de : " +  man instanceof Man);
+      console.log("Tenemos argumento del tipo :" + (typeof man))
+      console.log("Tenemos una instancia de : " +  (man instanceof Man));
    }
 
 })();
