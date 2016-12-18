@@ -1,3 +1,11 @@
+/*
+
+Simulando a la Familia.
+
+*/
+
+
+
 class Familia {
    constructor(apellidoPaterno, ojos, nariz, estatura, complexion) {
       this.apellidoPaterno = apellidoPaterno;
@@ -7,15 +15,11 @@ class Familia {
       this.complexion = complexion;
    }
 
-   function nacer(){
-      console.log("Nacio un nuevo integrante de la Familia.");
-   }
-
-   function reunirse() {
+   reunirse(){
       console.log("Reuniones familiares son una tradición");
    }
 
-   function apoyarse() {
+   apoyarse() {
       console.log("La familia siempre se apoya...");
    }
 
@@ -30,8 +34,30 @@ class Hijo extends Familia {
       this.hijos = hijos;
    }
 
-   function trabajar() {
-      console.log("Estamos trabajando muy duro diariamente!");
+    trabajar() {
+      console.log("Trabajando muy duro diariamente!");
    }
 
 };
+
+
+class Nieto extends Hijo {
+   constructor(apellidoPaterno, ojos, nariz,
+      estatura, complexion, nombre, profesion, hijos, empleado) {
+   super(apellidoPaterno, ojos, nariz,
+      estatura, complexion, nombre, profesion, hijos, empleado);
+   this.empleado = empleado;
+   }
+    visitarAbuelos() {
+      console.log(this.nombre + " Vista a los abuelos.");
+   }
+
+    trabajo(estado) {
+      if (estado == "empleado") {
+         console.log(this.nombre + " es de los nietos más grandes ya trabaja");
+      }else {
+         console.log("Es muy pequeño aun va a la escuela");
+      }
+   }
+
+}
