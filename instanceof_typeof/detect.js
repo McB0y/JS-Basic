@@ -15,10 +15,14 @@ Utilizando typeof e instanceof
 
    var primo = new Nieto("Chávez", "Cafes", "Curva", 1.80, "Robusta", "Miguel", "Ingeniero", "Sin", "Empleado");
 
+   var intruso = new String("¿Familia cómo están?");
 
 
    //poniendo a prueba
    detecta(tiaSegunda);
+   detecta(tio);
+   detecta(primo);
+   detecta(intruso);
 
 
 
@@ -27,7 +31,7 @@ Utilizando typeof e instanceof
       console.log("Sólo se dara la bienvenida a los que sean integrantes de la familia.");
       try {
 
-      if (integrante instanceof Familia) {
+      if ((integrante instanceof Familia) && (typeof integrante == "object")) {
          console.log("Bienvenido a la mansión...");
       } else {
          throw{
@@ -40,7 +44,7 @@ Utilizando typeof e instanceof
 
          var momento = new Date();
          console.log("El clan fue amenzado a las : " + momento.getHours() + " " + momento.getMinutes());
-         console.log(e.nombre + " " + e.medida + " Fuera de peligo...");
+         console.log("Problema con un : " + e.situacion + " " + e.medida + " Fuera de peligo...");
       } finally {
          console.log("La mansión siempre sera segura.");
       }
