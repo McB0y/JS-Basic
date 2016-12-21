@@ -17,7 +17,24 @@ es decir hacer referencia al objeto del que fue instanciado.
 })();
 
 
-
-addEventHandler('click', function() {
-   console.log(this);
+var button = document.querySelector('#siguiente');
+button.addEventHandler('click', function() {
+   console.log(this);//Es el elemento HTML que disparo este evento
 });
+
+class ThisIs {
+   constructor(valor, contexto) {
+      this.valor = valor;
+      this.contexto = contexto;
+   }
+   vale(){
+      console.log("this dentro del constructor hace referencia a la instancia.");
+      console.log(this);//Hace referencia a toda la clase
+/*
+En otras palabras "nombreDeLaInstancia.constructor" ==> regresa la estructura de la clase
+Dentro del metodo de la clase cosntructor ==> ThisIs {valor: "mi valor", contexto: "mi contexto"}
+*/
+   }
+};
+
+var valorThis = new ThisIs();
