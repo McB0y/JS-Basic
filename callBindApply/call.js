@@ -1,6 +1,6 @@
 /*
    McB0y.
-                           "BIND".
+                           "CALL".
 
          Uso de las funciones CALL, BIND & APPLY.
          Todo objeto en JS tiene en su prototipo
