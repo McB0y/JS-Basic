@@ -81,39 +81,45 @@ var	miArrayM	=	[1,	true,	[3,2],	"Hola",	{clave:	"valor"}];	//	Array	mixtos
 var cadenaAsc = miArrayNum.sort();
 var cadenaDes = miArrayNum.reverse();
 var cadenaIns = miArrayNum.push(dato1, dato2 , dato3);
-var cadenaDel = miArrayNum.pop(dato1, dato2, dato3);
-var cadenaString = miArrayNum.join();// NOTE: este método nos regresa una cadena de texto del arreglo
-var vacio = miArrayNum.splice(); //nos devuelve un arreglo vacio.
-var cadenaCut = miArrayNum.slice(indice); // NOTE: corta el arreglo tomando como referencia al índice
+var cadenaPrincipio = miArrayN.unshift(dato1, dato2, dato3);//agrega elementos al principio del arreglo
+var cadenaDel = miArrayNum.pop(dato);
+var cadenaDelP = miArrayNum.shift(dato);//borra el elemento del principio
+var cadenaString = miArrayNum.join();// NOTE: este método nos regresa una cadena de texto del arreglo, se le puede pasar un string separador.
+var vacio = miArrayNum.splice(indiceComienzo, indiceFinal);//eleimina elementos del array ("indice donde comienza", "cuantos elementos elimina");
+//Se puede también agregar elementos con splice pasando desde el tercer parametro en adelante los elementos por ejemplo;
+miArrayNum.splice(1,1, "Nuevo1", "Nuevo2");//empieza a eleiminar en el índice 1 borra solo un elemento y agrega los siguientes dos en la posicin 1.
+var cadenaCut = miArrayNum.slice(indice, indiceFinal); // NOTE: corta el arreglo tomando como referencia al índice y el segundo parametro donde termina "NO MODIFICA EL ARRAY ORIGINAL"
 
 // NOTE: los arreglos de tipo cadena resultantes
 
 var numericoAsc = miArrayCad.sort();
 var numericoDes = miArrayCad.reverse();
 var numericoIns = miArrayCad.push(cad1, cad2, cad3);
-var numericoDel = miArrayCad.pop(cad1, cad2, cad3);
+var numericoDel = miArrayCad.pop(cad1);
+var numericoDelP = miArrayCad.shift(cad1);
 var numericoString = miArrayCad.join(); // NOTE: Nos regresa su equivalente en cadena.
-var numericoCut = miArrayCad.slice(indice); // NOTE: nos regresa un arreglo resultante después del corte
- var vacio = miArrayCad.splice();//regresa el arreglo vacío;
+var numericoCut = miArrayCad.splice(indiceComienzo, indiceFinal);
+ var vacio = miArrayCad.slice(indice, indiceFinal);
 // NOTE: los arreglos de objetos
 
 var objetoAsc = miArrayObj.sort(); // NOTE:  Notese que respetara la jerarquía del primer criterio que encuentre para ordenar
 var objetosDes = miArrayObj.reverse(); // NOTE: toma como base para ordenar el contenido del arreglo
+var objetosInsP = miArrayObj.unshift(obj1, obj2, obj3);//agrego al principio.
 var objetosIns = miArrayObj.push(obj1, obj2, obj3);// NOTE: insertando 3
-var objetoDel = miArrayObj.pop(obj1, obj2, obj3); // NOTE: retirando 3 objetos
+var objetoDel = miArrayObj.pop(obj1); // NOTE: retirando 3 objetos
 var objetoStrig = miArrayObj.join();// NOTE: representacion del arreglo de objetos en cadena de caracteres
-var objetoCut = miArrayObj.slice(indice); // NOTE: cortando el objeto
-var vacio= miArrayObj.splice();//regresa nuestro arreglo vacío
+var objetoCut = miArrayObj.slice(indice, indiceFinal); // NOTE: cortando el objeto
+var vacio= miArrayObj.splice(indiceComienzo, indiceFinal);
 
 // NOTE: Los arreglos que forman matrices
 
 var matrizAsc = miArrayMatriz.sort();
 var matrizDes = miArrayMatriz.reverse();
 var matrizIns = miArrayMatriz.push(array1, array2, array3);
-var matrizDel = miArrayMatriz.pop(array1, array2, array3);
+var matrizDel = miArrayMatriz.pop(array1);
+//agregar shift() y unshift()., slice() y splice()
 var matrizString = miArrayMatriz.join();
-var matrizCut = miArrayMatriz.slice();
-var vacio = miArrayMatriz.splice();
+
 
 // NOTE: Arrays mixtos
 
@@ -123,8 +129,9 @@ var mixDes = miArrayM.reverse();
 var mixIns = miArrayM.push(elemnt1, elemnt2, elemnt3);
 var mixDel = miArrayM.pop(elemnt1, elemnt2, elemnt3);
 var mixString = miArrayM.join();
-var mixCut = miArrayM.slice(indice);
-var vacio = miArrayM.splice();//el arreglo esta vacío ahora.
+
+//agregar shift() y unshift(), slice() y splice()
+
 
 
 
