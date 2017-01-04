@@ -27,3 +27,6 @@ console.log(Math.max(valores));//Esto no se podria por que Math.max() funciona
                               //devolveria NaN
 
 console.log(Math.max(...valores));//Le pasamos una lista y esto actua cómo un call
+
+console.log(...valores);//Toma los valores itera sobre ellos y aplica split
+                        //REST por el contrario toma los valores y los vuelve arreglos.
