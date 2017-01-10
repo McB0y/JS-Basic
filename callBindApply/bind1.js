@@ -129,3 +129,18 @@ myVar.printNumbers = function() {
   
 }
 myVar.printNumbers();
+
+
+
+
+/*Usando funciones flecha de ES6 podemos tener un mejor código y más legible*/
+var myVar = {};
+
+myVar.name = 'pentacode';
+myVar.numbers = [1,2,3,4,5];
+
+myVar.printNumbers = function() {
+  this.numPlusOne = this.numbers.map((number) => {return number + 1});
+}
+
+myVar.printNumbers();
