@@ -20,8 +20,11 @@ teniendo atributos privados
 class Persona {
    constructor(name) {
       this._name = name;//el '_' significa que es privado
+                        //es solo una convención ya que si quisieramos
+                        //setear el valor deberia ser con "_name"
    }
 
+   
    get name(){
       return this._name.toUpperCase();
    }

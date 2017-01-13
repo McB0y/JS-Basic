@@ -3,9 +3,14 @@
 
 class convertibleArray extends Array {
    convert() {
-      let returnArray = [];
+      let returnArray = [];//Declara un arreglo.
       this.forEach(value => returnArray.push('convirtiendo! ' + value));
       return returnArray;
+      /*
+       1.-Al extender de la clase Array heredo todos sus metodos y atributos
+       2.-Cada instancia de esta clase se puede ver como un Array
+       3.-Creamos funcionalidades personalizadas que las clase padre no contienen
+      */
    }
 }
 

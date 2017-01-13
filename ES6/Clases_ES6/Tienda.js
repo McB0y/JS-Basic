@@ -27,8 +27,11 @@ class Tienda {
       return	this.tipo[servicio];//Regresa el estado del servicio
    }
 
-   getNombre(){
+   get Nombre(){
       return this.nombre;
+   }
+   set Nombre(nombre){
+      this.nombre = nombre;
    }
 };
 
