@@ -73,7 +73,7 @@ let persona = {
    edad : 30
 };
 
-function asignarEdad(persona) {
+function asignarEdad({}) {
    let edadSymbol = Symbol.for('edad');//compartiendo el id de symbol
    persona[edadSymbol] = 27;//asignamos la edad al objeto.
 }
