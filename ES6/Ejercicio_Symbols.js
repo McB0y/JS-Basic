@@ -22,7 +22,7 @@ console.log(persona[symbol2]);//comprobamos con que valor de edad quedo la perso
 
 //symbol1 = Symbol.for('edad') === symbol2 === symbol3
 
-//console.log(persona[symbol1]); [symbol2] o [symbol3] 77regresa la edad.
+//console.log(persona[symbol1]); [symbol2] o [symbol3] 27 regresa la edad.
 
 
 

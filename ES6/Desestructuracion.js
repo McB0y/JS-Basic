@@ -19,7 +19,7 @@ console.log(d);
 
 //Podemos dejar espacios al declarar las variables
 
-let animales = ["Gato", "Perro", "Gallo",];
+let animales = ["Gato", "Perro", "Gallo"];
 let refAnimales = [a, ,c] = animales;//Esto sólo nos va a devolver Gato y Gallo.
 console.log(a);//Gato
 console.log(b);//Error nunca se declaro la variable.

@@ -1,3 +1,15 @@
+/*
+Al igual que en en lenguajes como Java, las clases estaticas son conocidas
+también como clases método, por ejemplo la clase Math cuenta con muchos
+métodos disponibles entre ellos .ceil() y .floor() los cuales llamamos
+de la siguiente manera
+
+Math.ceil(valor);//Basta con accesa directamente desde la clase
+Math.floor(valor);//es decir no necesitamos intanciar una clase.
+*/
+
+
+
 /*export*/ class Helper {//agregando export podemos llevarnos el script a otro script
    static logTwice(){
       console.log("Me llamare 1");
@@ -24,7 +36,7 @@ class Persona {
                         //setear el valor deberia ser con "_name"
    }
 
-   
+
    get name(){
       return this._name.toUpperCase();
    }
