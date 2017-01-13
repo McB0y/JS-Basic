@@ -63,3 +63,22 @@ logModeloCarro.apply( carro , ["Gente", "Del futuro"]);//apply espera la referen
 //funciones prestadas... tomaremos prestados los atributos del objeto carro2
 
 console.log( carro.imprimir.call(carro2));//ya que sólo regresa los datos imprimir! :D
+
+
+
+//El siguiente ejemplo puede verse en stackoverflow  con el asunto : What is the difference between call and apply?//
+
+function theFunction(name, profession) {
+    console.log("My name is " + name + " and I am a " + profession + ".");
+}
+theFunction("John", "fireman");
+theFunction.apply(undefined, ["Susan", "school teacher"]);
+theFunction.call(undefined, "Claude", "mathematician");
+theFunction.call(undefined, ...["Matthew", "physicist"]); // used with the spread operator
+
+// Output: 
+
+// My name is John and I am a fireman.
+// My name is Susan and I am a school teacher.
+// My name is Claude and I am a mathematician.
+// My name is Matthew and I am a physicist.

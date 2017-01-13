@@ -109,3 +109,38 @@ function cambioCPU() {
 
 var swit = cambioCPU.bind(laptopGaming);
 swit();
+
+
+
+
+/*Un ejemplo que encontre sobre el uso de bind para resolver el lexical this de pentacode.com */
+
+// Solving lexical "This" with .bind()
+var myVar = {};
+
+myVar.name = 'pentacode';
+myVar.numbers = [1,2,3,4,5];
+
+myVar.printNumbers = function() {
+
+  this.numbers.forEach(function(number) {
+      console.log(this.name + ' counts ' + number);
+  }.bind(this));
+  
+}
+myVar.printNumbers();
+
+
+
+
+/*Usando funciones flecha de ES6 podemos tener un mejor código y más legible*/
+var myVar = {};
+
+myVar.name = 'pentacode';
+myVar.numbers = [1,2,3,4,5];
+
+myVar.printNumbers = function() {
+  this.numPlusOne = this.numbers.map((number) => {return number + 1});
+}
+
+myVar.printNumbers();

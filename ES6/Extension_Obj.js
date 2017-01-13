@@ -47,26 +47,21 @@ let obj2 ={
    }
 };
 
+/*Podemos extender con propiedades variables, propiedades con  notación de cadena, y variables de bloque*/
+let asesora = true;
+let lema = ()=>"Esfuerzate hoy!";
+const ESCUELA = "UNAM";
+const ASIGNATURA = "Matemáticas";
+
+let profesora = {
+ [ESCUELA] : "Facultad de Ing.",
+ [ASIGNATURA] : "Cálculo",
+ "Docente" : "Tiempo completo",
+ "Horas" : 40,
+  lema
+}
 
 
-
-var profesion = "Programador";
-var profesion2 = "Admin";
-var profesion3 = "Diseñandor"
-var sueldo = "$20000";
-var sueldo2 = "$10000";
-var sueldo3 = "$30000";
-var especialidad = "Web";
-var estado = "Soltero";
-
-
-
-
-
-   var miEmpleado2 = {
-      [profesion2] : "Jr",
-      [especialidad] : "Empresarial",
-      //[estado],esto daria ERROR
-      estado,
-      "Guapo" : "Ojo Azul"
-   }
+//Esto representa una desventaja ya que podemos volver a setear
+//las propiedades del objeto incluso aunque sean constantes
+//es por esto que los símbolos son muy utiles al utilizar objetos.

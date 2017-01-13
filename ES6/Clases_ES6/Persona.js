@@ -64,7 +64,7 @@ class futuroIngeniero extends Estudiante{
       this.habilidad2 = habilidad2;
       this.habilidad3 = habilidad3;
    }
-   //var inge = new futuroIngeniero("Rafa", "Cisneros", "Gómez", 24, "Hombre", "Mexicana");
+   /
 
    programar(lenguaje){
       console.log("Puedo programar en muchos lenguajes por ejemplo :" + lenguaje);
