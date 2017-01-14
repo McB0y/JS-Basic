@@ -1,4 +1,4 @@
-//Importando modulos
+//Exportando modulos
 export let keyValue = 1000;
 export default a = "Una variable cualquiera...";//es la única
 

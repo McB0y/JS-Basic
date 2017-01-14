@@ -15,7 +15,7 @@ Rotulación de ciclos y sentencias de escape.
             console.log("j", j);
             for(var x=1; x<=5; x++){
              console.log("El valor de x ", x);
-               break;//salir de este ciclo
+               break;//salir de este ciclo "SOLO DE ESTE CICLO" j continua
                break for_secundario; //salir del secundario
                break for_principal; //salir del ciclo principal.
             }
