@@ -24,7 +24,7 @@ var oso = ["Pardo", "Polar", "Grisley", "Mielero", "Panda", "Indú", "Hormiguero
       Tipo8 : "Hormiguero"
    };
 
-oso.forEach(function( elemento, index) {
+oso.forEach(function(elemento) {
          console.log("Distintas razas : " + elemento);
    });
 

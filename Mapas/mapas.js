@@ -1,5 +1,4 @@
 /** Mapas **/
-
 var fruta = new Map();
 
 fruta.set("nombre", "Manzana");
