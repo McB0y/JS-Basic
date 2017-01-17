@@ -11,15 +11,28 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
    var titulo = document.querySelector('h1');
 
-   titulo.addEventListener('click', function(e){
+   titulo.addEventListener('click', function(e) {
        console.log(e);//Hace referencia al objeto evento.
        console.log(e.target);//Hace referencia al elemento que disparo el evento o donde se inicia el evento
        console.log(this);//hace referencia al elemento HTML que dispara el evento
        console.log(e.currentTarget);//Lo mismo que this.
-       titulo.style.color = "red";
+       this.style.color = "red";
    });
-
-
-
    })();
+
+   //Con las funciones flecha el this es completamente ignorado
+   // titulo.addEventListener('click', e => {
+   //     console.log(e);//Hace referencia al objeto evento.
+   //     console.log(e.target);//Hace referencia al elemento que disparo el evento o donde se inicia el evento
+   //     console.log(this);//hace referencia al elemento HTML que dispara el evento
+   //     console.log(e.currentTarget);//Lo mismo que this.
+   //     e.target.style.color = "red";
+   // });
+
+   (function() {
+      var opcion = document.querySelector("select > option:nth-of-type(1)");
+      opcion.addEventListener('click', function(e){
+         console.log("México");
+      });
+      })();
 });
