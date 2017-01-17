@@ -39,36 +39,37 @@ function setCookie(nombre, valor, fecha) {
 
 
 
+function getCookies(nombre) {
+
+   var cookies = document.cookie;//capturamos todas las cookies.
+   var cookieArray = cookies.split("; ");//separa la cadena.
+   //console.log( cookieArray );
+   var long = cookieArray.length;
+
+   for (var i = 0; i < long; i++) {
+      var parArray = cookieArray[i].split("=");//crea otro arreglo
+      cookieArray[i] = parArray;//inserta el valor del parArray con cada iteración.
+
+
+      /*Ya que lo que se quiere es el contenido de la cookie,
+      checamos en cada iteracion si lo que hay en el arreglo
+      parArray en su posición 0 "el nombre de la cookie" es lo que pedimos,
+      si es asi se regresa ese valor con la funcion unescape()*/
+
+      if (parArray[0] === nombre) {
+         return unescape(parArray[1]);
+      }
+   }
+   return undefined;
+}
+
+
+
+//Volvemos a setear el valor de expiración de nuestra cookie.
 function deleteCookie(nombre) {//nombre de la cookie
  var hoy = new Date();
  hoy.setMonth( hoy.getMonth() - 1 );
  //Al ver que el mes pasado fue la fecha destruye automaticamente la cookie
  valor = getCookies(nombre);//obtenemos su contenido llamando a la cookie
  document.cookie = nombre + "=" + valor + ";expires=" + hoy.toUTCString() + ";";
-}
-
-
-
-function getCookies(nombre) {
-
-      var cookies = document.cookie;//capturamos todas las cookies.
-      var cookieArray = cookies.split("; ");//separa la cadena.
-      //console.log( cookieArray );
-      var long = cookieArray.length;
-
-      for (var i = 0; i < long; i++) {
-         var parArray = cookieArray[i].split("=");//crea otro arreglo
-         cookieArray[i] = parArray;//inserta el valor del parArray con cada iteración.
-
-
-         /*Ya que lo que se quiere es el contenido de la cookie,
-         checamos en cada iteracion si lo que hay en el arreglo
-         parArray en su posición 0 "el nombre de la cookie" es lo que pedimos,
-         si es asi se regresa ese valor con la funcion unescape()*/
-
-         if (parArray[0] === nombre) {
-            return unescape(parArray[1]);
-         }
-      }
-         return undefined;
 }
