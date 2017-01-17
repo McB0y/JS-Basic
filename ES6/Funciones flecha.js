@@ -122,3 +122,63 @@ var obj = {
 }
 obj.b(); // prints undefined, Window
 obj.c(); // prints 10, Object {...}
+
+
+
+
+
+
+
+
+/*En cuanto al uso de intervalos de tiempo, peticiones ajax, y acceso en objetos resulta tan fácil como en el sig. ejemplo:*/
+
+//Utilizando ES5
+function Programador() {
+  //this hace referencia a la instancia
+  this.name = "Me llamo Bob";
+  this.ocupacion = "Programador";
+  //Teniniamos que guardar la referencia a la instancia.
+  var self = this;
+  
+  setTimeout(function() {
+    console.log(self.name + " Y me han invocado");
+    console.log(self.ocupacion + " Es mi ocupación");
+    self.name = "Me llamo James";//no podras cambiar el atributo name
+    self.ocupacion = "Chef"; //no cambiara el atributo ocupacion
+    console.log(self);
+  },1000);
+  
+};
+
+var bob = new Programador();
+
+console.log(bob.name);// Ahora se llama James
+console.log(bob.ocupacion);//Ahora es un Chef.
+
+
+
+
+
+
+
+//Lexical this con ES6
+
+function Programador() {
+  //Heredaremos el contexto a la función flecha
+  this.name = "Me llamo Bob";
+  this.ocupacion = "Programador";
+
+  var invoca = setTimeout(() => { 
+    console.log(this.name + " Y me han invocado");
+    console.log(this.ocupacion + " Es mi ocupación");
+    this.name = "Me llamo James";
+    this.ocupacion = "Chef";
+    console.log(this);
+  },1000);
+  
+};
+
+var bob = new Programador();
+
+console.log(bob.name);// Ahora se llama James
+console.log(bob.ocupacion);//Ahora es un Chef.
