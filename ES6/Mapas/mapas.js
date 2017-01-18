@@ -15,14 +15,66 @@ tenemos disponibles ciertos métodos como son:
 y la propiedad "size" que nos da el tamaño actual del Map.
 
  **/
-var fruta = new Map();
 
-fruta.set("nombre", "Manzana");
+let equipo = new Map();
 
-fruta.set("peso", "250 gramos");
+equipo.set("monitor", "OLED");
+equipo.set("memoria RAM", "8 GB");
+equipo.set("HDD", "1 TB");
+equipo.set("tarjeta madre", "American threads");
+equipo.set("procesador", "Intel i5");
 
-console.log(fruta);
-console.log(fruta.get("nombre"));
-console.log(fruta.has("nombre"));
-console.log('name:'+fruta.delete("nombre"));
-console.log(fruta.has("nombre"));
+
+//manda 2 arrys y los pasa como argumento
+let custom = (objeto, prop1, prop2) => {//prop1 y prop2 son arrays
+   let long1 = prop1.length;
+   let long2 = prop2.length;
+   if(long1 === long2){
+      var contador =0, i = 0, j = 0;
+      while(contador < long1){
+        objeto.set(prop1[i], prop2[j]);
+         i++;
+         j++;
+         contador++;
+      }
+      return objeto;
+   }else{
+      console.log(`revise la cantidad de valores que introduce
+         y que todas ellas tengan un respectivo valor...`);
+   }
+};
+
+
+//Si se quiere tener el valor de una propiedad en específico,
+//se utiliza el método 'get' con la propiedad como parámetro.
+
+equipo.get("monitor");
+equipo.get("memoria RAM");
+equipo.get("HDD");
+equipo.get("tarjeta madre");
+equipo.get("procesador");
+
+//Podemos saber si el objeto contiene cierta propiedad, devolviendo un boolean.
+
+equipo.has("HDD");//true
+equipo.has("tarjeta madre");//true
+equipo.has("procesador");//true
+
+
+
+//Podemos borrar las propieades y su valor del objeto con el método "delete"
+equipo.delete("HDD");
+equipo.has("HDD");//false
+equipo.delete("tarjeta madre");
+equipo.has("tarjeta madre");//false
+equipo.delete("procesador");
+equipo.has("procesador");//false
+
+
+// los métodos keys, values y entries ---> regresan un MapIterator.
+
+
+/*
+Cabe aclarar que las propedades del mapa no son accesibles,
+con el operador punto, o de la forma objeto["propiedad"]
+*/
