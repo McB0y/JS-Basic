@@ -25,6 +25,13 @@ equipo.set("tarjeta madre", "American threads");
 equipo.set("procesador", "Intel i5");
 
 
+//tambien podemos concatenar:
+equipo.set("monitor", "OLED").set("memoria RAM", "8 GB").set("HDD", "1 TB");
+
+
+
+
+
 //manda 2 arrys y los pasa como argumento
 let custom = (objeto, prop1, prop2) => {//prop1 y prop2 son arrays
    let long1 = prop1.length;
@@ -77,4 +84,6 @@ equipo.has("procesador");//false
 /*
 Cabe aclarar que las propedades del mapa no son accesibles,
 con el operador punto, o de la forma objeto["propiedad"]
+como lo serian en un objeto, tampoco se pueden setear valores si no se utiliza
+el método set().
 */
