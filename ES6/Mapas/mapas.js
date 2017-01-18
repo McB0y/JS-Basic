@@ -1,4 +1,20 @@
-/** Mapas **/
+/**
+
+
+Mapas: Objetos que permiten la definición de "Elementos => Valor",
+tenemos disponibles ciertos métodos como son:
+-set
+-get
+-has
+-delete
+-keys
+-values
+-entries-->devuelve un objeto de arreglos
+-clear
+
+y la propiedad "size" que nos da el tamaño actual del Map.
+
+ **/
 var fruta = new Map();
 
 fruta.set("nombre", "Manzana");
