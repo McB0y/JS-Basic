@@ -168,3 +168,12 @@ return	typeof(elemento) ===	"number"; });
 
 miArrayM.filter(function(elemento){
 return	typeof(elemento) ===	"boolean"; });
+
+
+/* find() Un método Nativo del la nueva especificación.*/
+
+var frutas = ["banana", "pera", "uva", "calabaza", "tejocote", "fresa", "manzana"]
+
+console.log(frutas.find( parametro => parametro == "pera"));//pera
+
+console.log(frutas.findIndex( fruta => fruta == "manzana"));//6
