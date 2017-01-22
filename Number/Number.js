@@ -94,3 +94,29 @@ var nan3 = [1,2,3,4]/ {nombre : "Rafael", apellido : "Cisneros", edad : 23};// R
 //Podemos ver que no se cubre las operaciones entre lo que son objetos como: Cadenas, arreglos u objetos.
 
 var nan4 = 1000/ + ; //ERROR
+
+/* isNan - isFinite - isInteger son algunas de las mejoras en los objetos
+Numbre y Math para la versión ES6.*/
+
+console.log(Number.isNaN(42))
+console.log(Number.isNaN(0/0))
+
+console.log(Number.isFinite(123))
+
+console.log(Number.isInteger(123))
+console.log(Number.isInteger("123"))
+
+console.log(Number.EPSILON)
+
+console.log(Math.trunc(3.1416))
+
+
+if(Math.sign(7) === -1){
+   console.log("se ejecuta porqué es positivo.");
+}else {
+   console.log("Se ejecuta porque es negativo.");
+}
+
+
+console.log(Math.sign(7))
+console.log(Math.sign(-7))
