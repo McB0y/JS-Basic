@@ -112,10 +112,19 @@ console.log(Karina.profesion);
 //Igual podriamos cambiar el prototipo seteando el prototipo nuevo.
 
 let Gabriela = {
-age : 29;
-profesion : "Relaciones p.";
+   age : 29,
+   profesion : "Relaciones p.",
+   greet(){
+      console.log("Hello everyone!");
+   }
 }
 
 
 Reflect.setPrototypeOf(Karina, Gabriela);//cambiamos los prototypos
 console.log(Reflect.getPrototypeOf(Karina));//Tendra los atributos de Gabriela
+
+
+//podemos usar el método de Gabriela greet() ya que es prototipo de ella.
+//el argumento null es por qué this no se esta ocupando
+//y el tercer argumento es por que no se estan pasando parárametros.
+Reflect.apply(karina.greet, null, []);
