@@ -1,6 +1,4 @@
 /**
-
-
 Mapas: Objetos que permiten la definición de "Elementos => Valor",
 tenemos disponibles ciertos métodos como son:
 -set
@@ -13,7 +11,6 @@ tenemos disponibles ciertos métodos como son:
 -clear
 
 y la propiedad "size" que nos da el tamaño actual del Map.
-
  **/
 
 let equipo = new Map();
