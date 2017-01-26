@@ -26,9 +26,9 @@ McB0y : El Reflect API que se basa en metaprogramación.
 
 
 class Person {
-constructor(name);{
-this.name = name;
-}
+      constructor(name){
+      this.name = name;
+      }
 }
 
 function TipeObj() {
@@ -74,4 +74,48 @@ Reflect.setPrototypeOf(person, config);
 
 
 //Podemos ejecutarfunciones:
-Reflect.apply(person.greet, person, []);
+
+
+class Cowboy {
+   constructor(name, age) {
+      this.name = name;
+      this.age = age;
+   }
+   talk(prefix){
+      console.log(prefix + "Hello I'am here and I have " + this.age);
+   }
+}
+
+let Boby = Reflect.construct(Cowboy, ['Boby', 25]);
+// los parámetros son : Que funcion queremos ejecutar, a que objeto apunta this, que parametros recibe la fn
+Reflect.apply(Boby.talk, Boby, ['...']);
+
+
+
+//La forma más optima de encontrar el prototipo
+//de un objeto es utilizando el método de la API Reflect getPrototypeOf();
+
+//ejemplo:
+
+let Karina = new Person("Karina");
+//Que es más fácil que escribir esto : Karina.__proto__
+console.log(Reflect.getPrototypeOf(Karina));//Object{}
+console.log(Reflect.getPrototypeOf(Karina) == Person.prototype);//true
+
+
+Person.prototype.age = 27;//seteamos la propiedades
+Person.prototype.profesion = "Ingeniero";
+console.log(Karina.age);
+console.log(Karina.profesion);
+
+
+//Igual podriamos cambiar el prototipo seteando el prototipo nuevo.
+
+let Gabriela = {
+age : 29;
+profesion : "Relaciones p.";
+}
+
+
+Reflect.setPrototypeOf(Karina, Gabriela);//cambiamos los prototypos
+console.log(Reflect.getPrototypeOf(Karina));//Tendra los atributos de Gabriela
