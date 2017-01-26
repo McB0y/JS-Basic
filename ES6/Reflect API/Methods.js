@@ -26,9 +26,9 @@ class Medico {
 //Un objeto al que haremos referencia
 
 let enfermero = {
-   _name : "Ulises",
-   atiende{
-      console.log(`${this._nombre} checa los signos de un paciente`);
+   name : "Ulises",
+   "atiende"(){
+      console.log(`${this._nombre} revisael pulso del paciente.`);
    }
 };
 
@@ -55,9 +55,9 @@ Reflect.get(medico, "atiende", enfermero);
 
 
 //cambiemos el nombre del médico:
-Reflect.set(medico, "name", "Homer", enfermero);
+Reflect.set(enfermero, "name", "Homer", medico);
 console.log(enfermero);
-console.log(Reflect.get(medico, "name", mum));
+console.log(Reflect.get(medico, "name", enfermero));
 
 
 
@@ -66,3 +66,24 @@ console.log(Reflect.get(medico, "name", mum));
 //Podemos checar si algun objeto contiene las propiedades que queremos.
 
 Reflect.has(medico, "name");//si es asi devuelve un true.
+
+
+
+/*
+Si queremos conocer más de las propiedades que tieneun objeto
+podemos hacerlo de la siguiente manera
+
+Reflect.ownKeys(objeto);
+
+es decir nos regresara todas las propiedades que se seten en el constructor
+y si es una funcion nos devolvera un arreglo con todas las claves.
+Esto es util si lo que queremos conocer más del objeto.
+
+*/
+
+
+Reflect.ownKeys(medico);
+var arregloProp = Reflect.ownKeys(medico);
+arregloProp.find(function(valor){return valor == "edad"});
+arregloProp.findIndex(function(valor){return valor == "edad"});
+arregloProp.length
