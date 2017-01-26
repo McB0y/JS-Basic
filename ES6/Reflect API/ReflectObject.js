@@ -26,10 +26,31 @@ McB0y : El Reflect API que se basa en metaprogramación.
 
 
 class Person {
-
+constructor(name);{
+this.name = name;
+}
 }
 
-let person = Reflect.construct(Person, []);
+function TipeObj() {
+   this.age = 24;
+}
+
+//queremos reescribir el prototipo
+
+let person = Reflect.construct(Person, ["Memo"]);//Es otra forma de instanciar objetos
+
+console.log(peroson instanceof Person);//antes de asignar el 3 paramentro
+
+let person = Reflect.construct(Person, ["Memo"], TipeObj);
+console.log(person.__proto__ == Person.prototype);//false
+
+console.log(person.__proto__ == TipeObj.prototype);//true
+
+
+
+
+
+
 
 //Cosntrucción de prototipos
 let config = {
@@ -38,6 +59,8 @@ let config = {
         }
 }
 let person = Reflect.construct(Person, []);
+
+//nos permite setear el prototipo delobjeto
 Reflect.setPrototypeOf(person, config);
 
 
