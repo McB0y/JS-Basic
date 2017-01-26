@@ -8,3 +8,47 @@ McB0y : El Reflect API que se basa en metaprogramación.
         objetos y metodos en un solo lugar para poder mejorar los proyectos
         JavaScrip.
 */
+
+
+// NOTE: No se ocupa la palabra "new" para instanciar a los objectos.
+
+
+//Si queremos saber el prototipo de la clase
+//Person.prototype
+//desde una instancia seria
+//var memo = new Person() --> memo.__prototype__
+//para saber quien es el constructor de la clase:
+//Person.constructor  --> Regresa una función nativa
+//si se quiere saber el constructor de nuestra instanciar
+//memo.constructor  --> Llo que nos regresa la clase que la creo.
+
+
+
+
+class Person {
+
+}
+
+let person = Reflect.construct(Person, []);
+
+//Cosntrucción de prototipos
+let config = {
+      greet() {
+         console.log('Hello there!');
+        }
+}
+let person = Reflect.construct(Person, []);
+Reflect.setPrototypeOf(person, config);
+
+
+//Tenemos métodos para declarar propiedades.
+
+/*
+(defineProperty()),
+(deleteProperty()),
+(get()) y (set())
+*/
+
+
+//Podemos ejecutarfunciones:
+Reflect.apply(person.greet, person, []);
