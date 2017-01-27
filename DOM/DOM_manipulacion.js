@@ -86,3 +86,25 @@ hijos1.__proto__;//NodeList {Symbol(Symbol.toStringTag): "NodeList"}
 //Una forma de saber rapidamente de el prototipo usando Reflect API.
 Reflect.getPrototypeOf(hijos)//HTMLCollection
 Reflect.getPrototypeOf(hijos1)//NodeList.
+
+
+//Suponiendo que se tiene un elemento de tipo body
+var body = document.querySelector("body");
+//seleccionamos los elementos hijos
+var elementosBody = body.children.
+elementosBody[0].children//regresa un HTMLCollection
+elementosBody[0].firstChild//REGRESA LA INSTANCIA DE UN ELEMENTO HTML
+var img = elementosBody[0].firstChild;
+img instanceof HTMLElement//true
+img instanceof HTMLImageElement//true
+
+
+//className --> regresa un string con las clases de el elemento.
+//classList --> regresa un DOMTokenList[]. "NO UN ARREGLO."
+//ambos pueden ser seteados igalandolos a un String e.g
+
+img.classList = "parallax-slider"
+img.className = "parallax-slider"
+//para setear más de una clase al mismo tiempo
+img.className = "parallax-slider esta aquella"
+img.classList = "parallax-slider esta aquella"
