@@ -54,3 +54,35 @@ plantilla = ["<p>", "Soy un Array Plantilla", "</p>"];
 plantilla.join("");
 // nos regresa lo siguiente ya que es es un array.
 //"<p>Soy un Array Plantilla</p>"
+
+
+
+
+
+//Suponiendo que los elemenentos existen.
+//recorriendo el Dom y comprobando el tipo y de que instancia derivan
+//se obtienen lo siguiente:
+
+var menu = document.getElementById("menuBoton")
+//<div id="menuBoton"></div> es la salida
+//su prototipo es "menu.__proto__" y regresa HTMLDivElement
+//que en realidad es un object y su prototipo es Node
+
+typeof menu;//"object"
+menu instanceof Node//true
+
+var cabecera = document.querySelector("header");
+var hijos = cabecera.children;
+//cabecera.__proto__ = "HTMLElement"
+//al usar var hijos = cabecera.children "children en específico"
+//nos regresa un HTMLCollection "NO UN ARREGLO".
+hijos.__proto__;//HTMLCollection {Symbol(Symbol.toStringTag): "HTMLCollection"}
+
+
+var hijos1 = cabecera.childNodes
+hijos1.__proto__;//NodeList {Symbol(Symbol.toStringTag): "NodeList"}
+//si accedemos al atributo 'nodeList'  lo que nos regresa es
+//un NodeList de nuevo "NO ES UN ARREGLO"!!
+//Una forma de saber rapidamente de el prototipo usando Reflect API.
+Reflect.getPrototypeOf(hijos)//HTMLCollection
+Reflect.getPrototypeOf(hijos1)//NodeList.
