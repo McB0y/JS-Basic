@@ -45,3 +45,29 @@ var proxy = new Proxy(boy, handler);
 console.log(proxy.name);
 console.log(proxy.age);
 console.log(proxy.surname);
+
+
+var persona = {
+   name : "Ródrigo",
+   surname : "Vázquez",
+   greet(){
+      console.log("Hey everyone!");
+   }
+};
+
+var handler = {
+   get : function(target, name) {
+   return name in target ? target[name] : "No existe";
+   },
+   set : function(target, property, value) {// === Reflect API
+   if (value.length >= 4) {
+      Reflect.set(target, property, value);
+      }
+   }
+};
+
+var proxy = new Proxy(persona , handler);
+proxy.name = "R";
+console.log(proxy.name);//Ródrigo
+proxy.name = "Raphael";
+console.log(proxy.name);//Raphael .
