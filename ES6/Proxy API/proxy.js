@@ -127,3 +127,32 @@ proxy("Hola");//logueo correcto se desplego el msg Hola.
 proxy("Hola", "Me logueo");//
 //no produce nada por que no hay algo que maneje
 //que si hay mas de 1 argumento haga algo
+
+
+
+
+
+/*Tenemos otro tipo de proxys "REMOVIBLES" que nos permiten
+deshacernos de la funcionalidad que tienen nuestros proxy
+basta con mandar a llamar al método revoke().*/
+
+var animal = {
+   name : "león",
+   raw(){
+   console.log("Raw!!!!!");
+   }
+};
+
+var handler = {
+   get : function(target, name) {
+      return name in target ?  target[name] : "No existe";
+   }
+}
+
+//destructurando el objeto tenemos :
+
+let {proxy, name} = Proxy.revocable(animal, handler);
+
+console.log(proxy.name);//León
+revoke();
+console.log(proxy.name);//ERROR el proxy ya fue removido.
