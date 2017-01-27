@@ -71,3 +71,32 @@ proxy.name = "R";
 console.log(proxy.name);//Ródrigo
 proxy.name = "Raphael";
 console.log(proxy.name);//Raphael .
+
+
+
+
+//Proxys como prototipos.
+var proxy = new Proxy({} , handler);
+
+console.log(proxy.name);//No existe
+
+
+Reflect.setPrototypeOf(persona, proxy);
+console.log(persona.name);//Raphael
+console.log(persona.hobbies);//No esxiste
+
+//Es de esta forma que tenemos protección por parte del proxy.
+
+/*Los proxys pueden envolver a otros proxys.*/
+
+
+var protoHandler = {
+   get : function(target, name) {
+   return name in target ? target[name] : "No existe";
+   }
+};
+
+let proxy = new Proxy({}, handler);
+let protoProxy = new Proxy(proxy, protoHandler);
+Reflect.setPrototypeOf(persona, protoProxy);
+console.log(proxy.hobbies);//"No existe".
