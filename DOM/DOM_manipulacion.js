@@ -108,3 +108,44 @@ img.className = "parallax-slider"
 //para setear más de una clase al mismo tiempo
 img.className = "parallax-slider esta aquella"
 img.classList = "parallax-slider esta aquella"
+
+
+
+//Podemos tambien ver los elementos hijosde los hijos
+elementosBody[4]//suponiendo que este exista nos regresa un footer
+//ahora supongamos que nuestro footer tiene elementos
+elementosBody[4].childElementCount//4
+elementosBody[4].children//Nuestro HTMLCollection
+elementosBody[4].firstChild//nos regresa el primer elemento "NODO"
+//suponiendo que sea texto, comentarios o espacion --> #text
+
+elementosBody[4].firstElementChild
+//en cambio esto si nos regresa el primer elemento.
+
+var subelementos = elementosBody[4].childNodes;
+
+//con un simple arreglo podriamos saber el tipo de elemento e índice
+
+subelementos.forEach(function(elemento, indice){
+   console.log(elemento + " y su indice : " + indice);
+   if(subelementos[3] instanceof HTMLDivElement === true){
+      console.log("soy un elemento de tipo DIV");
+   }
+});
+
+/*
+Tendremos una salida como la siguiente.
+
+
+[object Text] y su indice : 0
+VM5516:1 [object HTMLDivElement] y su indice : 1
+VM5516:1 [object Text] y su indice : 2
+VM5516:1 [object HTMLDivElement] y su indice : 3
+VM5516:1 [object Text] y su indice : 4
+VM5516:1 [object Comment] y su indice : 5
+VM5516:1 [object Text] y su indice : 6
+VM5516:1 [object HTMLDivElement] y su indice : 7
+VM5516:1 [object Text] y su indice : 8
+
+"Lo cual para depuración puede llegar a ser útil."
+*/
