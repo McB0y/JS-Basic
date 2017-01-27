@@ -100,3 +100,30 @@ let proxy = new Proxy({}, handler);
 let protoProxy = new Proxy(proxy, protoHandler);
 Reflect.setPrototypeOf(persona, protoProxy);
 console.log(proxy.hobbies);//"No existe".
+
+
+
+
+/*Podemos también proteger funciones en mediante proxys*/
+
+
+function log(mensaje) {
+   console.log(`logueo correcto se desplego el msg ${mensaje}.`);
+}
+
+
+let handler = {
+   apply : function(target, thisArgs, argumentsList) {
+      if(argumentsList.length.length == 1){
+         return Reflect.apply(target, thisArgs, argumentsList);
+      }
+   }
+};
+
+var proxy = new Proxy(log, handler);
+//ejecutamos el proxy como una función.
+
+proxy("Hola");//logueo correcto se desplego el msg Hola.
+proxy("Hola", "Me logueo");//
+//no produce nada por que no hay algo que maneje
+//que si hay mas de 1 argumento haga algo
