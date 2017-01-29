@@ -33,3 +33,41 @@ console.log(contador.next()); // {value: 2, done:false}
 console.log(contador.next()); // {value: 2, done:false}
 console.log(contador.next()); // {value: 2, done:false}
 console.log(contador.next()); // {value: 2, done:false}
+
+//Cuando corremos un Genrador este nos devuelve un Iterador.
+//Tendremos un objeto atraves del cual podemos iterar.
+
+
+'use strict'
+
+function *selected(){
+  yield 'House';
+  yield 'Garage';
+}
+
+let it = selected();
+
+console.log(it.next())
+console.log(it.next())
+console.log(it.next())
+
+
+
+//Se vuelve bastante útil esto al combinar iteradores y generadores.
+//Nos permitiria por ejemplo generar tareas asincronas y
+//producir esos resultados administrandolos de manera fácil.
+//paso a paso (como un fetch a un servidor).
+'use strict'
+
+let obj ={
+   [Symbol.iterator]:gen
+};
+
+function *gen() {
+   yield 1;
+   yield 2;
+}
+
+for(let el of obj){
+   console.log(el);
+}
