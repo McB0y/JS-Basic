@@ -59,3 +59,52 @@ console.log(it.next());
 for(let element of array){
   console.log(element);
 }
+
+
+
+/*
+La estructura básica de cualquier iterator es la siguiente:
+regresar un obj con un único método "next" que asu vez regresa un objeto
+array[Symbol.iterator] = function(){
+  return {
+    next : function(){
+      return {
+       done : "reescribimos"
+       value : "rescribimos"
+      }
+    }
+  };
+}
+*/
+
+//Construcción de nuestro iterador
+
+"use strict"
+
+let person = {
+  name : "McB0y",
+  hobbies : ["Programar", "Escuchar música", "Patinar", "Electrónica"],
+  [Symbol.iterator]:function(){
+    let i = 0;
+    let hobbies = this.hobbies;
+    return {
+        next : function(){
+        let value = hobbies[i];
+        i++;
+        return {
+          done: i > hobbies.length ? true : false,
+          value : value
+        };
+      }
+    };
+  }
+};
+
+for(let hobby of person){
+  console.log(hobby);
+}
+
+
+
+//Cuando corremos un Generador este nos devuelve un Iterador.
+//Tendremos un objeto atraves del cual podemos iterar.
