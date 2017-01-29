@@ -48,6 +48,31 @@ function TipoAlumno() {
    this.premios = "Mención honorifica";
 }
 
+var Particular = {
+   estado : "neutro",
+   cambio : "positivo",
+   reversa : "negativo",
+   define(){
+      console.log("Soy particular positivo por defecto.");
+   },
+   cambia(){
+      console.log(`Cambie de estado a ${this.reversa}`);
+   }
+};
+
+
+//1.-Cambiamos a nuestro prototipo para poder usar los métodos.
+Reflect.setPrototypeOf(carlitos, Particular);//true
+//2.- aplicamos la ejecucion de las funciones ya que esta vez carlitos
+//tienen como prototipo Particular.
+
+
+
+Reflect.apply(carlitos.cambia, null, []);//Habra un problema ya  que no hagarra el contexto
+// seria su salida: Cambie de estado a undefined
+Reflect.apply(carlitos.cambia, Particular, [])//;
+//Cambie de estado a negativo
+
 
 /*De esta forma tengan en cuenta que en la misma instrucción
 creamos la instancia, y ademas cambiamos el constructor.
@@ -56,7 +81,10 @@ y de esta manera nos estamos ahorando un par de lineas de código
 var otro = new Niño("el nombre", "el sexo");
 Reflect.setPrototypeOf(otro, TipoAlumno.prototype)
 
-}
+*/
+
+
+Reflect.apply(, [arguments])
 
 Reflect.construct(Niño, ["Karol", "Mujer"] TipoAlumno);
 
