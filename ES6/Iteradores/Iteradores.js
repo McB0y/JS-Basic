@@ -11,7 +11,7 @@ Iteradores y Generadores
 
 'use strict'
 
-let array = ["Rafa", "Iron Man", "Tony"];
+let array = ["Ramón", "Iron Man", "Tony"];
 console.log(array);
 console.log(typeof array[Symbol.iterator]);
 //el arreglo u objeto contiene este 'Symbolo.iterator' que lo define
