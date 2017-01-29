@@ -71,3 +71,26 @@ function *gen() {
 for(let el of obj){
    console.log(el);
 }
+
+
+
+//Podemos usar los métodos con los que vienen disponibles los generadores.
+
+
+function *miGenerador(valor) {
+   for (var i = 0; i < valor; i++) {
+      try {
+         yield i;
+      } catch (e) {
+         console.log("Nuestro erro!");
+      } finally {
+
+      }
+   }
+}
+
+let it = miGenerador(4);
+console.log(it.next());
+console.log(it.throw('Hey un error ha ocurrido!'));
+//Ahora es claro que tenemos un mejor control de lo que se ejecuta!
+console.log(it.return('Hey un error ha ocurrido!'));//Por el momento solo lo soporta FF.
