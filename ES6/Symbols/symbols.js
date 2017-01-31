@@ -1,11 +1,11 @@
 /*
          Simbolos.
 
-Los simbolos son una tipo de dato nativo comolo son las cadenas,
+Los simbolos son una tipo de dato nativo como lo son las cadenas,
 y nos permiten agregar proiedadesa los objetos donde el simbolo
 seria el key.
-Los simbolos no son iterables, lo que quiere decir que si iteramos no vemremos
-los simbolos iterarse como si fueran el key de un objeto
+Los símbolos no son iterables, lo que quiere decir que si iteramos
+no veremos los símbolos iterarse como si fueran el key de un objeto
 El constructor Symbol no debe ser usado con el operador new.
 Tampoco debe ser extendido mediante clases.
 */

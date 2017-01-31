@@ -6,10 +6,10 @@ var campus = Symbol.for("escuela");//Symbols Compartidos
 
 
 var alumno = {
-   Nombre : "Sin asignar",
+   nombre : "Sin asignar",
    apellidos : "Sin asignar",
    promedio : 0,
-   setearValores(nombre, apellido, promedio){
+   setearValores(nombre, apellidos, promedio){
       this.nombre = nombre;
       this.apellidos = apellidos;
       this.promedio = promedio;
@@ -19,7 +19,7 @@ var alumno = {
 
 function asignarMattricula(alumno ,numeroMatricula){
    /*La "matricula" en esta función ahora es intocable
-     ya que no se podra acceder desde "matricula" simbolo declarada anteriormente
+     ya que no se podra acceder desde "matricula" símbolo declarada anteriormente
      lo que nos asegura que este valor sera único.
    */
    let matricula = Symbol("matricula");// es unico y diferente al externo
@@ -30,7 +30,7 @@ function asignarCampus(alumno, escuela){
 /*
    En este caso si nos regresara el valor al acceder al campus por medio
    del símbolo "campus", debido a que este se comparte con un simbolo llamado
-   "campus" que tiene el mismo identificador.s
+   "campus" que tiene el mismo identificador.
 */
    let campus = Symbol.for("escuela");
    alumno[campus] = escuela;
