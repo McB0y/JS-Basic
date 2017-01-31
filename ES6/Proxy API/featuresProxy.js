@@ -183,6 +183,10 @@ Object.getPrototypeOf(p); // TypeError: expected same prototype value
 
 
 
+"UNA VEZ MÁS YA QUE ES UNA PARTE CLAVE, 'EL HANDLER ES U OBJETO,
+CUYAS PROPIEDADES SON FUNCIONES QUE DEFINEN EL COMPORTAMIENTO DEL PROXY,
+CUANDO UN OPERADOR REALIZA UNA OPERACIÓN SOBRE EL' ".
+
 
 La documentación no es propia, y este archivo es una referencia
 rápida de los ejemplos que puedes encontrar en la Mozilla Developer Network.
