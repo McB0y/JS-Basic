@@ -1,13 +1,13 @@
 /*
-   McB0y: Al igual que los los simbolor y el API Reflect
+   McB0y: Al igual que los los simbolos y el API Reflect
           La proxy API nos ayuda con la metaprogramación
           algo que anteriormente en JS era bastante enredoso
           de poder manipular.
 
 
-          En especifico nos ayuda a envolver objetos, funciones
+          En específico nos ayuda a envolver objetos, funciones
           o lo que sea en realidad, poniendo trampas al intentar
-          acceder a las propiedades, puedes verlo como un filtro
+          acceder a las propiedades. Puedes verlo como un filtro
           que deberas pasar para poder acceder al objeto.
 */
 
@@ -24,7 +24,7 @@ var boy ={
 
 
 // el handler puede crear todas las trampas que quieras,
-//pues el el el PROXY lo que recibe el get es el objetivo
+//pues es el PROXY lo que recibe el get es el objetivo
 //"el objeto", y el segundo es la propiedad a la que accesar.
 
 
@@ -83,7 +83,7 @@ console.log(proxy.name);//No existe
 
 Reflect.setPrototypeOf(persona, proxy);
 console.log(persona.name);//Raphael
-console.log(persona.hobbies);//No esxiste
+console.log(persona.hobbies);//No existe
 
 //Es de esta forma que tenemos protección por parte del proxy.
 
