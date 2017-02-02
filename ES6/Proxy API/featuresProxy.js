@@ -36,6 +36,8 @@ NOTE: Se muestran las trampas disponibles:
 
 - "handler.getPrototypeOf()"
 
+[Dejo el ejemplo al terminar con la descripción de las propiedades].
+
 Una trampa para Object.getPrototypeOf.
 
 - "handler.setPrototypeOf()"
@@ -191,4 +193,7 @@ CUANDO UN OPERADOR REALIZA UNA OPERACIÓN SOBRE EL' ".
 La documentación no es propia, y este archivo es una referencia
 rápida de los ejemplos que puedes encontrar en la Mozilla Developer Network.
 con el nombre : Proxy "en el idioma original (Inglés)".
+
+
+NOTE: ESTA API EN CONJUNTO CON SYMBOL Y REFLECT PUEDEN SER MUY PODEROSAS!
 */
