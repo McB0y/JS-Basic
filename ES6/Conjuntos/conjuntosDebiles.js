@@ -1,7 +1,3 @@
-
-
-
-
 //Con los conjuntos pasa algo diferente :
 
 let set = new Set([1,1,1]);
@@ -9,7 +5,7 @@ set.add(2);//ahora tenemos un conjunto con dos valores diferentes
 
 for (vari of set) {
   console.log(vari);
-}//nos devuelve solo 1 ya que no permite la repetición de valores y es por eso que el orden no esta importante
+}//nos devuelve sólo 1 ya que no permite la repetición de valores y es por eso que el orden no esta importante
 //EL CONJUNTO ES SIMILAR AL ARRAY PERO CON VALORES UNICOS!
 
 
@@ -25,11 +21,11 @@ for (vari of set) {
 //PERO POR OTRA PARTE PIENSA EN QUE AL SER UNICOS SU POSICION SIEMPRE PUEDE SER VISTA COMO UNA CLAVE ;) "PUEDEN SER USADOS COMO ID"...
 
 
-//WeakSet: al igual que el WeakMap solo pueden almacenar objetos que en este caso al ser solo valores deben de ser objetos.
+//WeakSet: al igual que el WeakMap sólo pueden almacenar objetos que en este caso al ser sólo valores deben de ser objetos.
 //al igual que el WeakMap no son iterables ya que a js  no le da chance de saber cuantos elementos contiene tu conjunto
 
 
-let miWeakSet = new WeakSet([{a:1},{b:2},{c:3}]);//SOLO OBJETOS!
+let miWeakSet = new WeakSet([{a:1},{b:2},{c:3}]);//SÓLO OBJETOS!
 
 for(valor of miWeakSet){
   console.log(valor);//no imprime nos regresa valores.
