@@ -47,6 +47,16 @@ p.setAttribute("class", "parrafo");
 p.setAttribute("id", "parrafo");
 p.setAttribute("name", "parrafo");
 
+/*De la misma forma tenemos el método "getAtributes" para obtener
+el atributo de un elemento y para obtener una lista de atributos
+usamos el método 'attributes'
+de dos formas:
+1.- elemento.getAtribute('atributo')
+sólo regresa el atributo que se especifica.
+2.-elemento.attributes
+
+*/
+
 
                   //PROPIEDADES
 //Si queremos conocer el nombre de un elemento,
@@ -68,6 +78,17 @@ contenedor.nodeName;//"SECTION"
 
 contenedor.className = " contenedor section1 dividido";
 contenedor.classList = " rojo blanco azul";
+
+
+/*ACCESO A TEXTOS:
+Dos formas:
+elemento.textContent --> elementos que si tienen cierre y que contienen texto
+elemento.value---> en elementos que no tienen cierre de etiqueta y cuentan con este atributo
+                   por ejemplo: imput, select, etc. Nos trae el contenido
+
+Ambas propiedades sirven como set y get, lo curioso es que si se quieren los contenidos
+texto de los hijos de un contenedor podemos usar .textContent para obtenerlos.
+*/
 
 
 //NodeValue: Nos regresara el valor del nodo dependiendo de si es un

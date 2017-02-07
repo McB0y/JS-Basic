@@ -37,7 +37,7 @@ var scripts = document.scripts;
 var css = document.styleSheets;
 var charset = document.charset;
 
-/*Locurioso es que también podriamos acceder a propiedades como :*/
+/*Lo curioso es que también podriamos acceder a propiedades como :*/
 var links = document.links;
 var imagenes = document.images;
 var formularios = document.forms;
