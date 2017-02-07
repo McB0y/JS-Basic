@@ -1,5 +1,7 @@
 /*
 DOM "DOCUMENT OBJECT MODEL"
+NOTE: "EL DOM NO FORMA PARTE DE LA ESPECIFICACIÓN
+       ECMA SCRIPT asi que NO ES JAVASCRIPT!, comocueriosidad."
 El API del DOM es un conjunto de métodos que nos permiten
 la manipulación de un documento HTML o XML.
 Este transforma el documento en un arbol de nodos jerárquico,
@@ -14,13 +16,27 @@ que es facilmente manipulable, los nodos más importantes son:
 
 //Manipulando el DOM.
 var html = document.createElement("html");
+//o podriamos poner para todos loselementos :
+//var html = document.documentElement;
+//var body = document.body;
+//var head = document.head;...etc
 var body = document.querySelector("body");
 var footer = document.createElement("footer");
 var main = document.createElement("main");
 var section = document.createElement("section");
 var aside = document.createElement("aside");
 var video = document.createElement("video");
+var url = document.URL;
+var domanin = document.domain;
+var scripts = document.scripts;
+var css = document.styleSheets;
+var charset = document.charset;
 var h1 = document.createElement("h1");
+
+/*Locurioso es que también podriamos acceder a propiedades como :*/
+var links = document.links;
+var imagenes = document.images;
+var formularios = document.forms;
 
 html.appendChild(head);
 html.appendChild(body);
