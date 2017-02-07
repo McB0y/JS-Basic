@@ -26,12 +26,16 @@ var main = document.createElement("main");
 var section = document.createElement("section");
 var aside = document.createElement("aside");
 var video = document.createElement("video");
+var h1 = document.createElement("h1");
+
+/*De manera estricta podemos ver que estos no serias elementos
+ya que un elemento se corresponde a una etiqueta.
+Por tanto los siguientes serian propiedades del documento.*/
 var url = document.URL;
 var domanin = document.domain;
 var scripts = document.scripts;
 var css = document.styleSheets;
 var charset = document.charset;
-var h1 = document.createElement("h1");
 
 /*Locurioso es que también podriamos acceder a propiedades como :*/
 var links = document.links;
