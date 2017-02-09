@@ -75,3 +75,13 @@ Tenemos un par de métodos disponibles:
 .replace('url'); --->Nos redirecciona pero sin meter la URL al historial.
 
 */
+
+/*History :
+Un objeto que contienen los elementos del historial del nav.
+
+Tenemos un parde métodos disponibles:
+
+.back();//Sin parámetros
+.foward();//Sin parámetros
+.go('int');//Si es positivo va hacia adelante en el historial contrario en negativo
+*/
