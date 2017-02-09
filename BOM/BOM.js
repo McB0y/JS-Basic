@@ -21,7 +21,17 @@ window.alert("Un mensaje!"); // alert("Un mensaje!")
 .moveTo(x,y);
 resizeTo(x,y);
 .print();
-.scrollTo(x,y);
-.scrollBy(x,y);
+.scrollTo(x,y);//Es la referencia desde la parte superior (inicial)
+.scrollBy(x,y);//E con respecto a la posición actual
 
 */
+
+// NOTE: Los navegadores comparten muchas tecnologias
+// pero hay muchas otras que estos no comparten.
+
+window.chrome;//regresa un objeto si este es ejecutado sobre google chrome
+window.chrome;//regresa undefined en mozilla por ejemplo.
+
+
+// NOTE: La siguiente es una buena forma de poder detectar los navegadores
+//http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
