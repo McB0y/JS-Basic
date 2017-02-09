@@ -35,3 +35,43 @@ window.chrome;//regresa undefined en mozilla por ejemplo.
 
 // NOTE: La siguiente es una buena forma de poder detectar los navegadores
 //http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+
+
+//LOCATION : Elobjeto que nos permite conocer la estructura de una URL.
+/*
+
+Entre sus propiedades tenemos los siguiente.
+
+.hash
+.host
+.hostname
+.href
+.origin
+.protocol
+.pathname//el complemento que viene despues del dominio.
+
+//Podemos colocarnos en un elemento de la página desde la url haciendo lo siguiente:
+
+"url".html#'idDelElemento'
+agregando '#' + el id de un elemento podemos colocarnos en el mismo
+
+ejemplo:
+http://www.mipagina.com/unsubdominio.html#elParrafo
+
+redireccionar la página:
+
+solo es necesaria la propiedad href del objeto location
+
+*/
+
+setTimeout(function() {
+   location.href = "http://google.com";
+},3000);//funcion de redirección automatica.
+
+
+/*
+Tenemos un par de métodos disponibles:
+.assign('url'); ---> nos redirecciona a esta url.
+.replace('url'); --->Nos redirecciona pero sin meter la URL al historial.
+
+*/
