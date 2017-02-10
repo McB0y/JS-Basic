@@ -1,0 +1,37 @@
+La consola de Chrome es una potente herramienta que nos ayuda al debuggin
+de un script que puede verse como un complemento a un ide
+
+para esto utilizamos las  siguientes opciones:
+
+F12 ---> para poder abrir la consola.
+SOURCES ---> para poder ver archivos que tengamos en un directorio
+             o para poder abrir una directorio o archivo específico.
+
+NOTE: las opciones de resume execution y dont pause in exception deben de estar seleccionadas "Azul"
+si esto es asi te permite poner el cursor sobre alguna variable y ver el valor que se tiene
+
+NOTE: Tenemos una pantalla dividida en distintas opciones
+en la parte izquierda de la pestaña sources tenemos la estructura de directorios
+esta puede ocultarse, en la parte de en medio está la opción de código
+en la parte derecha tenemos distirntas opciones de debug las cuales son:
+
+Watch ---> Nos permite evaluar una variable y ver el valor en ese momento
+
+Call Stack
+
+Scope ---> El scope que tienes en el momento de ejecutar
+
+Breakpoints ---> Podemos dar click a un lado de la variable
+                 para agregar un breakpoint, enseguida deveremos de dar F5
+                 y nuestro script se detendra en ese breakpoint.
+
+DOM BreakPoints ---> Cuando hay cambios en el DOM se reflejan en esta opción
+                     En la pestaña de elementos seleccionamos el elemento
+                     damos click derecho y seleccionamos la opción pertinente
+                     para ("cambio de atributo", "cambio de nodo", etc).
+                     SI SE DETECT UN CAMBIO ESTÁ OPC NOTIFICA AUTOMATICAMEN0TE.
+
+
+XHR Breakpoints
+Event Listener Breakpoints
+Event Listeners
