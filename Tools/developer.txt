@@ -32,6 +32,26 @@ DOM BreakPoints ---> Cuando hay cambios en el DOM se reflejan en esta opción
                      SI SE DETECT UN CAMBIO ESTÁ OPC NOTIFICA AUTOMATICAMEN0TE.
 
 
-XHR Breakpoints
-Event Listener Breakpoints
-Event Listeners
+XHR Breakpoints ---> Funciones necesarias para ejecutar AJAX
+
+Event Listener Breakpoints ---> Puntos de quiebre para escuchar
+                                eventos en el DOM.
+
+Event Listeners ---> Selección de los distintos eventos disponibles.
+
+
+
+/* NOTE: */
+
+De las cosas más importantes en la pestaña "SOURCES" tenemos
+la opción en la parte derecha el menú snippets los pasos para ejecutar
+código desde está opción son las siguientes:
+
+1.-Seleccionar la opción de snippets.
+
+2.-Click derecho (new).
+
+3.- Escribir el código del JS propio "independiente del código de la app"
+    'Cabe mencionar que el snippet tiene el acceso a las variables del
+     código, por tanto podemos checar en tiempo real que es lo que está
+     pasando'.
