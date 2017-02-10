@@ -41,7 +41,7 @@ Event Listeners ---> Selección de los distintos eventos disponibles.
 
 
 
-/* NOTE: */
+/* NOTE: Snippets código en tiempo real */
 
 De las cosas más importantes en la pestaña "SOURCES" tenemos
 la opción en la parte derecha el menú snippets los pasos para ejecutar
@@ -55,3 +55,31 @@ código desde está opción son las siguientes:
     'Cabe mencionar que el snippet tiene el acceso a las variables del
      código, por tanto podemos checar en tiempo real que es lo que está
      pasando'.
+
+
+/*NOTE : Consola*/
+
+console.log(var1, var2, varN); Ppodemos pasar más de un valor a la consola
+
+Podemos desplegar la información de una variable "de forma completa": console.dir()
+
+console.dir(var);
+
+
+
+podemos ver elementos multidimensionales en la consola como:
+arrays u objetos que pueden llegar a ser dificiles de interpretar en linea.
+
+console.table(array);
+console.log(object);
+
+Podemos llevar a cabo pruebas con los elementos del DOM de la siguiente forma:
+
+1.-Abrir las herramientas de desarrollador y seleccionar la opcion Elements.
+
+2.-Seleccionar el elemento que nos interese oara efectuar la prueba.
+
+3.-Seleccionar ahora la opción de la consola y escribir "$0"
+   Lo que regresara es el elemento seleccionado y apartir de este
+   se creara un historial con los elementos previos siendo el '0'
+   el elemento actual $1, $2, $3, $4.
