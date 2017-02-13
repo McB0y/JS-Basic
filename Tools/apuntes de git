@@ -1,0 +1,109 @@
+para poder subir un repositorio a GitHub debmos seguir los siguientes pasos:
+
+1.-verificar que a la cuenta de gitHub que se pretende subir los archivos
+   esta sincronizada con la cuenta de correo con la que se abrio la cuenta
+   de GitHub,de lo contrario setear los valores:
+
+2.- Los siguientes comandos crean el repo y lo suben a la cuenta:
+
+echo "# apuntes-git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/mcboys/apuntes-git.git
+git push -u origin master
+
+3.- Una forma alterna si es que ya se tiene los archivos .git
+    y el .readme es la siguiente:
+
+git remote add origin https://github.com/mcboys/apuntes-git.git
+
+git push -u origin master
+
+NOTE: El Quick setup se quitara del repositorio hasta
+que estos ultimos dos comandos hayan sido ejecutados con exito.
+
+"podemos ver la configuracion de git con el sig comando"
+
+git config --list --global // (para checar la configuración solamente)
+gi config user.email "correo@dom.com" --global
+
+y ejecutar de nuevo si hubo error "git push -u origin master"
+
+ejecutado esto deberiamos de ver entrando al repo todos los arhivos.
+;)
+
+
+
+Fork nos sirve para poder hacer nuestra propia copia
+
+Otra de las opciones interesantes es poder aportar a un repo
+de alguna otra cuenta con la opción pull request
+
+hay que seguir los siguietes pasos:
+
+1.- seleccionar el repo
+2.-selecciona la rama en la que se hara el pullrequest
+3.-presionar el boton "Compare & pull request"
+   opcional el boton "New pull request".
+
+4.-Dejar los comentarios de porque se quiere participar en el
+   repo y esperamos a que se responda la solicitud
+5.-Por otra parte en la cuenta a la que se estan mandando los cambios
+   se tendran en la parte superior las notificaciones de los
+   pull request.
+6.-Finaliza una vez que repondamos las solicitudes y demos click en
+   Merge Pull request, una vez hecho esto se reflejan los cambios en
+   la cuenta del repositorio actual.
+
+7.-Para ver reflejados los cambios de la nube "de los pull request"
+   tenemos que tener el area de trabajo limpia, una vez hecho eso
+   antes de empujar algun cambio de nuestro local "push", debemos jalar
+   tiramos el siguiente comando : git fetch origin master
+   hecho esto tendremos los cambios reflejados en la rama oculta
+  7.a.- ahora solo queda hacer merge.
+  7.b.- Una vez fusionadas las ramas podremos ejecutar un push
+  para enviar los respectivos cambios que nosotro hagamos
+
+  "En resumen primero pull -- fetch -- push"
+
+8.-Para eleminar una rama remota tiramos desde consola:
+   git push origin --delete nombre_rama
+
+
+/*Nota : podemos tener tantos repos como queramos con el sig comando*/
+
+   git remote add 'nombre_opcional_que_se_le_da_al_repo' "url_del_repo"
+
+   NOTE : git pull puede jalar y actualizar los cambios
+
+
+Podemos renombrar un repositorio con lo siguiente:
+
+para checar si en alguna carpeta ya contamos con un repositorio remoto (en github o bitBucket)
+
+git remote -v
+
+git remote --help //para pedir la ayuda necesaria
+
+git remote rename <old> <new>
+
+e.g.
+
+
+git remote add bitbuket "URL del repo que queremos jalar"
+
+por tanto se puede tener un solo proyecto configurado en distintos
+hostins "git y bitbucket por ejemplo"
+
+ahora al hacer cambios estos se veran reflejados en ambos
+si es que los empujamos en alguno de estos, acontinuación simulo
+el push con ambos bitbucket y github
+
+git push github master //hacia la rama master
+git push bitbucket master //hacia la rama master
+
+
+Si agregamos el repo remoto y queremos quitarlo
+
+git remote remove bitbucket//ya no esta si checamos
