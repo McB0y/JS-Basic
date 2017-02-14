@@ -107,3 +107,5 @@ git push bitbucket master //hacia la rama master
 Si agregamos el repo remoto y queremos quitarlo
 
 git remote remove bitbucket//ya no esta si checamos
+
+Checar GitLab (opción para construcción de nube personal.)
